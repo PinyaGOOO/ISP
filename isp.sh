@@ -14,3 +14,5 @@ dnf install -y nftables
 echo -e 'table inet my_nat {\n\tchain my_masquerade {\n\ttype nat hook postrouting priority srcnat;\n\toifname "ens18" masquerade\n\t}\n}' > /etc/nftables/isp.nft
 echo 'include "/etc/nftables/isp.nft"' >> /etc/sysconfig/nftables.conf
 systemctl enable --now nftables
+
+hostnamectl set-hostname isp; exec bash
