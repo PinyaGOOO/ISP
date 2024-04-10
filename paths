@@ -1,0 +1,31 @@
+hq-r
+ens-18 1.1.1.2/30 gate 1.1.1.1
+ens-19 172.16.100.1/26 gate 1.1.1.1
+ens-20 4.4.4.1/30
+
+br-r
+ens-18 2.2.2.2/30 gate 2.2.2.1
+
+br_srv
+ens-18 192.168.100.10/28 gate 192.168.100.1
+
+cli 
+ens-18 3.3.3.2/30 gate 3.3.3.1
+
+
+
+/etc/radvd.conf
+/etc/sysctl.conf
+/etc/nftables/isp.nft
+/etc/sysconfig/nftables.conf
+/etc/frr/daemons
+/etc/dhcp/dhcpd.conf
+/etc/sysconfig/dhcpd
+/etc/dhcp/dhcpd6.conf
+
+scp admin@10.10.10.1:/var/backup-script/backup.sh /var/backup-script/
+
+hq-srv
+ip -c a show ens18
+ping -c4 fd24:172::1
+
