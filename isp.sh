@@ -16,4 +16,4 @@ echo -e 'table inet my_nat {\n\tchain my_masquerade {\n\ttype nat hook postrouti
 echo 'include "/etc/nftables/isp.nft"' >> /etc/sysconfig/nftables.conf
 systemctl enable --now nftables
 
-hostnamectl set-hostname isp; exec bash
+hostnamectl set-hostname ISP; exec bash

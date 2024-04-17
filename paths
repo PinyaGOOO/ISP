@@ -27,6 +27,8 @@ scp admin@10.10.10.1:/var/backup-script/backup.sh /var/backup-script/
 
 hq-srv
 ip -c a show ens18
+ip -c route
+ip -c -6 route
 ping -c4 fd24:172::1
 
 
